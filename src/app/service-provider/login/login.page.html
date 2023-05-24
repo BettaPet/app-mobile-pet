@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/service-provider"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Service Provider Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-img src="assets/images/bettapet.jpg"></ion-img>
+  <form>
+    <ion-item>
+      <ion-label position="floating">Login</ion-label>
+      <ion-input type="text" [(ngModel)]="login" name="login" (input)="updateFormValidity()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="{{ passwordVisible ? 'text' : 'password' }}" [(ngModel)]="password" name="password" (input)="updateFormValidity()"></ion-input>
+      <ion-icon name="eye" class="end clickable" (click)="togglePasswordVisibility()"></ion-icon>
+    </ion-item>
+
+    <ion-button expand="full" (click)="loginFormSubmit()" [disabled]="!isFormValid">Login</ion-button>
+  </form>
+</ion-content>

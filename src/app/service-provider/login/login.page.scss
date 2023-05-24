@@ -1,0 +1,10 @@
+ion-item {
+  ion-icon.end {
+    position: absolute;
+    right: 8px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--ion-color-medium);
+  }
+}

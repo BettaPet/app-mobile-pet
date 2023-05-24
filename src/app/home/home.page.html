@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div class="container">
+    <img src="assets/images/bettapet.jpg" alt="Logo" class="logo-image">
+    <ion-item>
+      <ion-label>Select Role:</ion-label>
+      <ion-select [(ngModel)]="selectedRole">
+        <ion-select-option [value]="'endUser'" [ngClass]="{ 'selected-option': selectedRole === 'endUser' }">End User</ion-select-option>
+        <ion-select-option [value]="'serviceProvider'" [ngClass]="{ 'selected-option': selectedRole === 'serviceProvider' }">Service Provider</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="full" (click)="redirectToLoginPage()">Next</ion-button>
+  </div>
+</ion-content>

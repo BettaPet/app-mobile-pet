@@ -1,0 +1,74 @@
+<!-- register.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/end-user"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      End-User Register
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <h2 class="form-title">Personal Information</h2>
+  <form (ngSubmit)="submitForm()">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="personalInfo.nome" name="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">CPF</ion-label>
+      <ion-input type="text" [(ngModel)]="personalInfo.cpf" name="cpf"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Login</ion-label>
+      <ion-input type="text" [(ngModel)]="personalInfo.login" name="login"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="personalInfo.password" name="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input type="password" [(ngModel)]="personalInfo.confirmPassword" name="confirmPassword"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Birth Date</ion-label>
+      <ion-input type="text" [(ngModel)]="personalInfo.birthDate" name="birthDate"></ion-input>
+    </ion-item>
+    <h2 class="form-title">Contact Information</h2>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="contactInfo.email" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Phone</ion-label>
+      <ion-input type="tel" [(ngModel)]="contactInfo.phone" name="phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Zip Code</ion-label>
+      <ion-input type="text" [(ngModel)]="contactInfo.zip_code" name="zip_code"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">State</ion-label>
+      <ion-input type="text" [(ngModel)]="contactInfo.state" name="state"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">County</ion-label>
+      <ion-input type="text" [(ngModel)]="contactInfo.county" name="county"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Address</ion-label>
+      <ion-input type="text" [(ngModel)]="contactInfo.address" name="address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Address Number</ion-label>
+      <ion-input type="text" [(ngModel)]="contactInfo.address_number" name="address_number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Complement</ion-label>
+      <ion-input type="text" [(ngModel)]="contactInfo.complement" name="complement"></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit" [disabled]="!isFormValid()">Submit</ion-button>
+  </form>
+</ion-content>
